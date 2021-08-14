@@ -1,4 +1,4 @@
-package com.vic.spring.mybatis.mybatisdemo.model;
+package com.vic.spring.mybatis.mybatisdemo.user.model;
 
 import lombok.Data;
 

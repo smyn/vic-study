@@ -19,6 +19,7 @@
 
 	<modules>
 		<module>security-demo</module>
+		<module>mybatis-demo</module>
 	</modules>
 
 	<dependencies>
