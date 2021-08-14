@@ -100,13 +100,13 @@ public class CodeGenerator {
         strategy.setSuperServiceClass(IBaseService.class);
         strategy.setSuperServiceImplClass(BaseService.class);
         // 写于父类中的公共字段
-        strategy.setSuperEntityColumns("id","deleted","inUser","inDate","lastEditUser","lastEditDate");
+        strategy.setSuperEntityColumns("id","deleted","in_user","in_date","last_edit_user","last_edit_date");
         strategy.setInclude("ns_company_info");
         strategy.setControllerMappingHyphenStyle(false);
         strategy.setTablePrefix("ns_");
 //        strategy.setNameConvert(new NsNameConvert(strategy));
         mpg.setStrategy(strategy);
-        mpg.setTemplateEngine(new FreemarkerTemplateEngine());
+        mpg.setTemplateEngine(new NsFreemarkerTemplateEngine());
         mpg.execute();
     }
 
