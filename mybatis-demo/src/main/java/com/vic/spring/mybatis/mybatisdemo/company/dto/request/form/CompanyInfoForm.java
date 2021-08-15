@@ -1,8 +1,6 @@
 package com.vic.spring.mybatis.mybatisdemo.company.dto.request.form;
 
-import com.vic.spring.mybatis.mybatisdemo.company.model.CompanyInfo;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
- import com.vic.spring.mybatis.mybatisdemo.base.dto.BaseForm;
+import com.vic.spring.mybatis.mybatisdemo.base.dto.BaseForm;
 
 
 /**

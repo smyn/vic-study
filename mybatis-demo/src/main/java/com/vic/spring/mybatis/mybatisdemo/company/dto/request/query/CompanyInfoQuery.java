@@ -1,6 +1,5 @@
 package com.vic.spring.mybatis.mybatisdemo.company.dto.request.query;
 
-import com.vic.spring.mybatis.mybatisdemo.company.model.CompanyInfo;
 import com.vic.spring.mybatis.mybatisdemo.base.dto.BaseQuery;
 
 /**
