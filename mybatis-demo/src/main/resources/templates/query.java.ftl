@@ -1,7 +1,7 @@
 package ${package.Query};
 
 import ${package.BaseQuery};
-
+import ${package.Entity}.${entity};
 /**
  * <p>
  * ${table.comment!} Query
