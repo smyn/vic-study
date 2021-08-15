@@ -2,6 +2,8 @@ package ${package.ServiceImpl};
 
 
 import ${package.Entity}.${entity};
+import ${package.Query}.${entity}Query;
+import ${package.Form}.${entity}Form;
 import ${package.Mapper}.${table.mapperName};
 import ${package.Service}.${table.serviceName};
 import ${superServiceImplClassPackage};

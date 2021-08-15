@@ -2,16 +2,23 @@ package ${package.Controller};
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import com.vic.spring.mybatis.mybatisdemo.base.dto.Response;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import javax.validation.Valid;
+import  ${package.Service}.I${entity}Service;
+import ${package.Entity}.${entity};
+import ${package.Query}.${entity}Query;
+import ${package.Form}.${entity}Form;
 <#if restControllerStyle>
 import org.springframework.web.bind.annotation.RestController;
 <#else>
-import org.springframework.stereotype.Controller;
+
 </#if>
 <#if superControllerClassPackage??>
 import ${superControllerClassPackage};
 </#if>
-
 /**
  * <p>
  * ${table.comment!} 前端控制器
@@ -34,6 +41,35 @@ public class ${table.controllerName} extends ${superControllerClass} {
 <#else>
 public class ${table.controllerName} {
 </#if>
+
+    @Autowired
+    private I${entity}Service service;
+
+    @GetMapping("{id}")
+    public Response<${entity}> getById(@PathVariable("id") Long id ){
+        return Response.SUCCESS(service.selectById(id));
+    }
+
+    @GetMapping
+    public Response<IPage<${entity}>> getPage(${entity}Query query){
+        return Response.SUCCESS(service.queryPage(query));
+    }
+
+    @PutMapping
+    public Response<Long> add(@RequestBody  @Valid ${entity}Form form){
+        return Response.SUCCESS(service.insert(form));
+    }
+
+    @PostMapping
+    public Response<Integer> update(@RequestBody @Valid ${entity}Form form){
+        return Response.SUCCESS(service.updateById(form));
+    }
+
+    @PostMapping("{id}")
+    public Response<Integer> delete(@PathVariable("id") Long id ){
+         return Response.SUCCESS(service.deleteById(id));
+    }
+
 
 }
 </#if>

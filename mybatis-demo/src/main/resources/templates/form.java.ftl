@@ -1,7 +1,7 @@
-package ${package.Mapper};
+package ${package.Form};
 
-import ${package.Entity}.${entity};
-import ${superMapperClassPackage};
+import ${package.BaseForm};
+
 
 /**
  * <p>

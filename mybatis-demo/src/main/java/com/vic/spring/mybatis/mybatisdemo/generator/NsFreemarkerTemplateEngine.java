@@ -50,16 +50,8 @@ public class NsFreemarkerTemplateEngine extends FreemarkerTemplateEngine {
                     }
                 }
 
-                Map<String,Object> packageMap = (HashMap)objectMap.get("package");
 
-                packageMap.put("Query",(packageMap.get("Entity")+"").replace(".entity",".dto.request."+packageMap.get("ModuleName")+".query"));
-                packageMap.put("Form",(packageMap.get("Entity")+"").replace(".entity",".dto.request."+packageMap.get("ModuleName")+".form"));
-                packageMap.put("Entity",(packageMap.get("Entity")+"").replace(".entity",".model"));
-
-
-
-                pathInfo.put("entity_path",pathInfo.get("entity_path").replace("\\entity","\\model"));
-
+                setFormAndQuery(objectMap,pathInfo);
                 String entityName = tableInfo.getEntityName();
                 String controllerFile;
                 if (null != entityName && null != pathInfo.get("entity_path")) {
@@ -103,11 +95,45 @@ public class NsFreemarkerTemplateEngine extends FreemarkerTemplateEngine {
                         this.writerFile(objectMap, this.templateFilePath(template.getController()), controllerFile);
                     }
                 }
+
+                if (null != entityName && null != pathInfo.get("query_path")) {
+                    controllerFile = String.format((String)pathInfo.get("query_path") + File.separator + "%sQuery" + this.suffixJavaOrKt(), entityName);
+                    if (this.isCreate(FileType.ENTITY, controllerFile)) {
+                        this.writerFile(objectMap, "/templates/query.java.ftl", controllerFile);
+                    }
+                }
+
+                if (null != entityName && null != pathInfo.get("form_path")) {
+                    controllerFile = String.format((String)pathInfo.get("form_path") + File.separator + "%sForm" + this.suffixJavaOrKt(), entityName);
+                    if (this.isCreate(FileType.ENTITY, controllerFile)) {
+                        this.writerFile(objectMap, "/templates/form.java.ftl", controllerFile);
+                    }
+                }
+
             }
         } catch (Exception var11) {
             logger.error("无法创建文件，请检查配置信息！", var11);
         }
 
         return this;
+    }
+
+
+
+    private  void setFormAndQuery(Map objectMap, Map<String, String> pathInfo){
+        Map<String,Object> packageMap = (HashMap)objectMap.get("package");
+
+        packageMap.put("Query",(packageMap.get("Entity")+"").replace(".entity",".dto.request.query"));
+        packageMap.put("Form",(packageMap.get("Entity")+"").replace(".entity",".dto.request.form"));
+        packageMap.put("BaseQuery","com.vic.spring.mybatis.mybatisdemo.base.dto.BaseQuery");
+        packageMap.put("BaseForm","com.vic.spring.mybatis.mybatisdemo.base.dto.BaseForm");
+        //将 包名中的entity 更名为model
+        packageMap.put("Entity",(packageMap.get("Entity")+"").replace(".entity",".model"));
+        //将更改实体类的输出路径
+        pathInfo.put("entity_path",pathInfo.get("entity_path").replace("\\entity","\\model"));
+
+        pathInfo.put("query_path",pathInfo.get("entity_path").replace("\\model","\\dto\\request\\query"));
+        pathInfo.put("form_path",pathInfo.get("entity_path").replace("\\model","\\dto\\request\\form"));
+
     }
 }

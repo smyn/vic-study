@@ -1,7 +1,6 @@
-package ${package.Mapper};
+package ${package.Query};
 
-import ${package.Entity}.${entity};
-import ${superMapperClassPackage};
+import ${package.BaseQuery};
 
 /**
  * <p>
