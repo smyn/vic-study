@@ -83,7 +83,6 @@ public class CodeGenerator {
 
         // 配置模板
         TemplateConfig templateConfig = new TemplateConfig();
-
         templateConfig.setXml(null);
         mpg.setTemplate(templateConfig);
 
