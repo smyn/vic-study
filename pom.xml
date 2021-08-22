@@ -20,7 +20,7 @@
 	<modules>
 		<module>security-demo</module>
 		<module>mybatis-demo</module>
-		<module>mybatis-query</module>
+		<module>mybatis-boot</module>
 	</modules>
 
 	<dependencies>
