@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<style>
+
+body
+{
+   font-family: Arial !important;
+}
+
+.content{
+    margin: auto;
+    width: 90%;
+    font-size: 10px;
+}
+td{
+    border: 1px solid black ;
+    height: 30px;
+}
+
+table{border-collapse:collapse;}
+
+.table-div{
+    margin: auto;
+}
+.row{
+    display:inline-block;
+}
+.tr-title{
+    background: #17323f;
+}
+
+.tr-title td{
+    background: #17323f;
+    height: 20px;
+    font-size: 12px;
+    font-weight: 600px;
+    color: #FFFFFF;
+
+}
+
+td{
+    font-size: 10px;
+    border: 1px solid black ;
+}
+
+.description-title{
+   font-weight: 600;
+   text-decoration:underline;
+}
+
+.sign-div{
+    width: 45%;border-bottom: 1px solid black;
+}
+
+.sign-title{
+    font-weight: 600;
+}
+
+.sign-content{
+    margin-left: 20px;
+}
+
+
+      
+</style>
+<body>
+ <div style="width: 700px;height: 1000px; margin: auto;"> 
+        <div>
+            <div class="row">
+                <img src="https://jira.newegg.org/s/nyia9r/810001/39bb24d6836b1ecfe388f567662818dc/_/jira-logo-scaled.png"/>
+            </div>
+            <div class="row" style="padding-left: 20px;font-size: 10px;">
+                <p>Newegg Staffing Services</p>
+                <p>18045 Rowland St. City of Industry CA 91748</p>
+                <p>www.neweggstaffing.com</p>
+            </div>
+        </div>
+        <div class="table-div">
+            <div style="margin: auto; text-align: center;height: 20px;"><p>COMMERCIAL CREDIT APPLICATION</p></div>
+            <div>
+                <table  class="content">
+                    <tr class="tr-title" >
+                        <td colspan="16"><span>COMPANY INFORMATION</span></td>
+                    </tr>
+                    <tr>
+                        <td  colspan="8">Business or Organization Name*</td>
+                        <td  colspan="8">DBA/ Parent company (if any)</td>
+                    </tr>
+                    <tr>
+                        <td  colspan="16">Business Address*</td>
+                    </tr>
+                    <tr>
+                        <td  colspan="6">City*</td>
+                        <td  colspan="3">State*</td>
+                        <td  colspan="3">Zip*</td>
+                        <td  colspan="4">Country*</td>
+                    </tr>
+                    <tr class="tr-title" >
+                        <td colspan="16"><span>ACCOUNT INFORMATION</span></td>
+                     </tr>
+                     <tr>
+                        <td  colspan="8">Primary Account Payable Name*</td>
+                        <td  colspan="8">Primary Account Payable Mailing Address*</td>
+                    </tr>
+                    <tr>
+                        <td  colspan="8">Primary Account Payable Email Address*</td>
+                        <td  colspan="4">Primary Account Payable Phone*</td>
+                        <td  colspan="4">Credit Limit Requested Amount*</td>
+                    </tr>
+                    <tr class="tr-title" >
+                        <td colspan="16"><span>BANK REFERENCES</span></td>
+                     </tr>
+                     <tr>
+                        <td  colspan="8">Bank Name*</td>
+                        <td  colspan="4">Contact Name*</td>
+                        <td  colspan="4">Contact Phone*</td>
+                    </tr>
+                    <tr>
+                        <td  colspan="16">Bank Address*</td>
+                    </tr>
+                    <tr>
+                        <td  colspan="6">City*</td>
+                        <td  colspan="3">State*</td>
+                        <td  colspan="3">Zip*</td>
+                        <td  colspan="4">Country*</td>
+                    </tr>
+                    <tr>
+                        <td  colspan="8">Bank Account Number* </td>
+                        <td  colspan="8"><span>Type of Account* </span><br> <span>Savings Checking Line of Credit Other</span></td>
+                    </tr>
+                    <tr class="tr-title" >
+                        <td colspan="16"><span>BUSINESS / TRADE REFERENCES (Related Industry)</span></td>
+                     </tr>
+                     <tr>
+                        <td  colspan="4">Company Name*</td>
+                        <td  colspan="4">Contact Name/Title*</td>
+                        <td  colspan="4">Contact Email Address*</td>
+                        <td  colspan="4">Contact Phone*</td>
+                    </tr>
+                    <tr>
+                        <td  colspan="4">Company Name</td>
+                        <td  colspan="4">Contact Name/Title</td>
+                        <td  colspan="4">Contact Email Address</td>
+                        <td  colspan="4">Contact Phone</td>
+                    </tr>
+                    <tr>
+                        <td  colspan="4">Company Name</td>
+                        <td  colspan="4">Contact Name/Title</td>
+                        <td  colspan="4">Contact Email Address</td>
+                        <td  colspan="4">Contact Phone</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content">
+                <p><span>* Required</span></p>
+                <p>  
+                    <span class="description-title">CONSENT:</span>
+                    <span> To obtain deferred billing from Newegg Staffing Services Inc., you must consent to disclose your information including but not limit ed to
+                            you r financial statement to Newegg Staffing Services Inc. and affiliates.
+                    </span>
+                </p>
+                <p>  
+                    <span class="description-title">ADDITIONAL PROMISES:</span>
+                    <span>If approved, you agree that: (1) payment terms are based on signed agreement/contract, and (2) Newegg Staffing Services Inc.
+                        may, in its sole discretion, cancel or modify your deferred billing program if your method of payment, payment history or financial condition should change.
+                        If you default on a payment obligation, you will no longer be able to use service under this program.                        
+                    </span>
+                </p>
+                <p>  
+                    <span class="description-title">AUTHORIZATION AND REPRESENTATIONS:</span>
+                    <span>On behalf of your company, you authorize Newegg Staffing Services Inc. to review your com- pany's financial and
+                        credit standing in connection with this application. You authorize banks and other referral sources listed herein to release your information to Newegg Staffing
+                        Services Inc. You represent and certify: (1) the content in this application is complete and truthful, along with any other information provided; (2) you have the
+                        legal authority to bind your company; (3) you agree to promptly notify us in writing if there is any material adverse change to your company (financial condition
+                        or otherwise); and (4) you grant Newegg Staffing Services Inc. the right to authorize third parties to review your company’s financial information and other
+                        information contained herein for purposes of evaluating your company’s financial and credit standing.                      
+                    </span>
+                </p>
+                <p>
+                    <div class="row sign-div">
+                        <span class="sign-title">COMPANY NAME</span>
+                        <span class="sign-content">1231231232</span>
+                    </div>
+                    <div class="row sign-div">
+                        <span class="sign-title">PRINT NAME</span>
+                        <span class="sign-content">121231223122</span>
+                    </div>
+                </p>
+                <p>
+                    <div class="row sign-div">
+                        <span class="sign-title">SIGNED</span>
+                        <span  class="sign-content">1231231232</span>
+                    </div>
+                    <div class="row sign-div">
+                        <span class="sign-title">SIGNED</span>
+                        <span  class="sign-content">121231223122</span>
+                        <span class="sign-title">DATE</span>
+                        <span  class="sign-content">121231223122</span>
+                    </div>
+                </p>
+                <p><span>* Please sign and return by email to accounting@neweggstaffing.com</span></p>
+                <p>
+                    <table style="border:2 px solid black;width: 100%;background-color: darkgrey;">
+                        <tr>
+                            <td style="border:1 px solid black;height: 15px;text-align: center;">
+                              <span style="font-weight: 600;">FOR NEWEGG STAFFING SERVICES INC. INTERNAL USE ONLY</span></td></tr>
+                        <tr>
+                            <td style="border:1 px solid black;height: 30px;">
+                                <div style="display: inline-block;width: 100%;">
+                                    <div class="row" style="width: 45%;">Request Date </div>
+                                    <div class="row" style="width: 45%;">Account Rep. (Name/Title)</div>
+                                </div>
+                                <div style="display: inline-block;width: 100%;">
+                                    <div class="row" style="width: 45%;">01/01/1997 </div>
+                                    <div class="row" style="width: 45%;">Vic</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1 px solid black;height: 30px;">
+                                <div style="display: inline-block;width: 100%;">
+                                    <div class="row" style="width: 45%;">Terms Approved </div>
+                                    <div class="row" style="width: 45%;">Approved Credit Limit</div>
+                                </div>
+                                <div style="display: inline-block;width: 100%;">
+                                    <div class="row" style="width: 45%;">Due Upon Receipt </div>
+                                </div>
+                                <div style="display: inline-block;width: 100%;">
+                                    <div class="row" style="width: 45%;"></div>
+                                </div>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1 px solid black;height: 30px;">
+                                <div style="display: inline-block;width: 100%;">
+                                    <div class="row" style="width: 45%;">Approved by</div>
+                                    <div class="row" style="width: 45%;">Approval Number</div>
+                                </div>
+                                <div style="display: inline-block;width: 100%;">
+                                    <div class="row" style="width: 45%;"></div>
+                                    <div class="row" style="width: 45%;"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </p>
+            </div>
+            
+        </div>
+        <div>
+            <span style="font-weight: 600;font-size: 10px;">Newegg Staffing Services Inc. Credit Terms</span> 
+            <span style="font-weight: 600;font-size: 10px;float: right;">Rev. 20210702</span>
+        </div>
+</div>  
+</body>
+</html>

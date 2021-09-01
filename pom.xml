@@ -19,7 +19,7 @@
 
 	<modules>
 		<module>security-demo</module>
-		<module>mybatis-demo</module>
+		<module>html-pdf</module>
 		<module>mybatis-boot</module>
 	</modules>
 
