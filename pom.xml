@@ -22,7 +22,7 @@
 		<module>html-pdf</module>
 		<module>mybatis-boot</module>
 		<module>java-nio</module>
-		<module>source-tomcat</module>
+		<module>tomcat-source</module>
 	</modules>
 
 	<dependencies>
