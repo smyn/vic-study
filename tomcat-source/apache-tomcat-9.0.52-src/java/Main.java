@@ -9,16 +9,14 @@ import org.apache.catalina.startup.Tomcat;
 public class Main {
 
     public static void main(String[] args) {
-        String catalina = "D:/code/github/spring-demo/tomcat-source/apache-tomcat-9.0.52-src";
-        String [] runaArgs = {
-            "-Dcatalina.home="+catalina+"/",
-            "-Dcatalina.base="+ catalina+"/",
-            "-Djava.endorsed.dirs="+catalina+"://endorsed",
-            "-Djava.io.tmpdir="+catalina+"://temp",
-            "-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager",
-            "-Djava.util.logging.config.file="+catalina+"://conf/logging.properties",
-            "-Duser.language=en",
-            "-Duser.region=US"};
-        Bootstrap.main(runaArgs);
+//        -Dcatalina.home=D:/code/github/spring-demo/tomcat-source/apache-tomcat-9.0.52-src/
+//            -Dcatalina.base=D:/code/github/spring-demo/tomcat-source/apache-tomcat-9.0.52-src/
+//            -Djava.endorsed.dirs=D:/code/github/spring-demo/tomcat-source/apache-tomcat-9.0.52-src/endorsed
+//            -Djava.io.tmpdir=D:/code/github/spring-demo/tomcat-source/apache-tomcat-9.0.52-src/temp
+//            -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+//            -Djava.util.logging.config.file=D:/code/github/spring-demo/tomcat-source/apache-tomcat-9.0.52-src/conf/logging.properties
+//            -Duser.language=en
+//            -Duser.region=US
+        Bootstrap.main(args);
     }
 }
