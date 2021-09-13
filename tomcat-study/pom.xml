@@ -14,7 +14,7 @@
 	</properties>
 
 	<modules>
-		<module>apache-tomcat-9.0.52-src</module>
+		<module>source-tomcat.9.0.52</module>
 	</modules>
    
 </project>
