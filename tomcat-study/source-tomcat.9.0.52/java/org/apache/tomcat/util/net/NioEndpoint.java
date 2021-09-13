@@ -489,7 +489,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel,SocketChannel> 
             socketWrapper = newWrapper;
 
             // Set socket properties
-            // Disable blocking, polling will be used
+            // 将socker 设置为非阻塞的 Disable blocking, polling will be used
             socket.configureBlocking(false);
             if (getUnixDomainSocketPath() == null) {
                 socketProperties.setProperties(socket.socket());
@@ -498,6 +498,8 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel,SocketChannel> 
             socketWrapper.setReadTimeout(getConnectionTimeout());
             socketWrapper.setWriteTimeout(getConnectionTimeout());
             socketWrapper.setKeepAliveLeft(NioEndpoint.this.getMaxKeepAliveRequests());
+            //将整个channel 交给poller线程组去处理。acceptor 负责从socker 中接收数据
+            //注册逻辑是发布一个的PoolerEvent 事件发布后唤醒
             poller.register(socketWrapper);
             return true;
         } catch (Throwable t) {
