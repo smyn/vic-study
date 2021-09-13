@@ -9,12 +9,12 @@ import org.apache.catalina.startup.Tomcat;
 public class Main {
 
     public static void main(String[] args) {
-//        -Dcatalina.home=D:/code/github/spring-demo/tomcat-source/apache-tomcat-9.0.52-src/
-//            -Dcatalina.base=D:/code/github/spring-demo/tomcat-source/apache-tomcat-9.0.52-src/
-//            -Djava.endorsed.dirs=D:/code/github/spring-demo/tomcat-source/apache-tomcat-9.0.52-src/endorsed
-//            -Djava.io.tmpdir=D:/code/github/spring-demo/tomcat-source/apache-tomcat-9.0.52-src/temp
+//        -Dcatalina.home=D:/code/github/spring-demo/tomcat-study/source-tomcat.9.0.52/
+//            -Dcatalina.base=D:/code/github/spring-demo/tomcat-study/source-tomcat.9.0.52/
+//            -Djava.endorsed.dirs=D:/code/github/spring-demo/tomcat-study/source-tomcat.9.0.52/endorsed
+//            -Djava.io.tmpdir=D:/code/github/spring-demo/tomcat-study/source-tomcat.9.0.52/temp
 //            -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
-//            -Djava.util.logging.config.file=D:/code/github/spring-demo/tomcat-source/apache-tomcat-9.0.52-src/conf/logging.properties
+//            -Djava.util.logging.config.file=D:/code/github/spring-demo/tomcat-study/source-tomcat.9.0.52/conf/logging.properties
 //            -Duser.language=en
 //            -Duser.region=US
         Bootstrap.main(args);
