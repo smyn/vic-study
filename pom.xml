@@ -8,9 +8,9 @@
 		<version>2.5.2</version>
 	</parent>
 	<groupId>com.vic.spring</groupId>
-	<artifactId>spring-demo</artifactId>
+	<artifactId>vic-study</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-demo</name>
+	<name>vic-study</name>
 	<description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>
 	<properties>
@@ -22,7 +22,7 @@
 		<module>html-pdf</module>
 		<module>mybatis-boot</module>
 		<module>java-nio</module>
-		<module>tomcat-source</module>
+		<module>tomcat-study</module>
 	</modules>
 
 	<dependencies>
