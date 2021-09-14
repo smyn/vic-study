@@ -485,6 +485,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel,SocketChannel> 
             }
             NioSocketWrapper newWrapper = new NioSocketWrapper(channel, this);
             channel.reset(socket, newWrapper);
+            //将socker 进行缓存
             connections.put(socket, newWrapper);
             socketWrapper = newWrapper;
 
@@ -728,6 +729,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel,SocketChannel> 
         public void register(final NioSocketWrapper socketWrapper) {
             socketWrapper.interestOps(SelectionKey.OP_READ);//this is what OP_REGISTER turns into.
             PollerEvent event = null;
+            //TODO 事件缓存是为了做什么呢
             if (eventCache != null) {
                 event = eventCache.pop();
             }
@@ -1691,6 +1693,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel,SocketChannel> 
             try {
                 int handshake = -1;
                 try {
+                    //TODO  NioChannel always is true
                     if (socketWrapper.getSocket().isHandshakeComplete()) {
                         // No TLS handshaking required. Let the handler
                         // process this socket / event combination.

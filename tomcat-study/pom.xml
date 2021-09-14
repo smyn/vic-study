@@ -15,6 +15,7 @@
 
 	<modules>
 		<module>source-tomcat.9.0.52</module>
+		<module>tomcat-demo</module>
 	</modules>
    
 </project>
