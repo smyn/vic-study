@@ -1,0 +1,43 @@
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - info
+          - health
+          - prometheus
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:staffing;MODE=MYSQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: sa
+    schema:
+      - ../../../../sql/clean.sql
+      - ../../../../sql/schema.sql
+      - ../../../../sql/data.sql
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+
+mybatis-plus:
+  global-config:
+    banner: false
+    db-config:
+      update-strategy: IGNORED # 全字段更新
+
+logging:
+  pattern:
+#    console: '{"timestamp": "%d{yyyy-MM-dd HH:mm:ss.SSS, UTC}", "level": "%-5p", "thread": "%t", "class": "%-40.40logger{39}", "message": "%m", "exception": "%wEx{3}"}%n'
+  charset:
+    console: UTF-8
+  level:
+    com.newegg.staffing: debug
+    com.baomidou.dynamic: debug

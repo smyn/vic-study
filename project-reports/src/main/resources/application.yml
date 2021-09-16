@@ -1,0 +1,37 @@
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.16.78.63:8306/porject_report?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&autoReconnectForPools=true
+    username: root
+    password: 123456
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    open-in-view: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+
+logging:
+  pattern:
+#    console: '{"timestamp": "%d{yyyy-MM-dd HH:mm:ss.SSS, UTC}", "level": "%-5p", "thread": "%t", "class": "%-40.40logger{39}", "message": "%m", "exceptions": "%ex"}'
+  charset:
+    console: UTF-8
+  level:
+    com.newegg.staffing: debug
+    com.baomidou.dynamic: debug
+#  switch: spi
+
+mybatis-plus:
+  global-config:
+    banner: false
+    db-config:
+      update-strategy: IGNORED # 全字段更新
